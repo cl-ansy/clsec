@@ -22,11 +22,23 @@ const About = () =>
         </button>
       </a>*/}
 
-      <a href="" aria-label="github" className="link link--icon">
+      <a
+        href="https://github.com/cl-ansy"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="github"
+        className="link link--icon"
+      >
         <GitHubIcon />
       </a>
 
-      <a href="" aria-label="linkedin" className="link link--icon">
+      <a
+        href="https://www.linkedin.com/in/cslansing/"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="linkedin"
+        className="link link--icon"
+      >
         <LinkedInIcon />
       </a>
     </div>

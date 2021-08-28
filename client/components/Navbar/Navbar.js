@@ -20,8 +20,8 @@ const Navbar = () => {
         className={styles['nav__list']}
       >
         <li className={styles['nav__list-item']}>
-          <a href="#certifications" onClick={toggleNavList} className="link link--nav">
-            Certifications
+          <a href="#certs" onClick={toggleNavList} className="link link--nav">
+            Certs
           </a>
         </li>
 

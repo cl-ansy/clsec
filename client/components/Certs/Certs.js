@@ -4,7 +4,7 @@ import gcih from '@public/badges/gcih.png'
 import styles from '@client/components/Certs/Certs.module.css'
 
 const Certs = () =>
-  <section className={cx(styles.certs, 'section center')}>
+  <section className={cx(styles.certs, 'section center')} id="certs">
     <h2 className="section__title">Certs</h2>
     <a
       target="_blank"
