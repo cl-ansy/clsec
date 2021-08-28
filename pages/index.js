@@ -7,13 +7,14 @@ import About from '@client/components/About/About'
 import Certs from '@client/components/Certs/Certs'
 import Skills from '@client/components/Skills/Skills'
 import Contact from '@client/components/Contact/Contact'
+import ScrollToTop from '@client/components/ScrollToTop/ScrollToTop'
 import Footer from '@client/components/Footer/Footer'
 
 const Index = () => {
   const { themeName } = useContext(ThemeContext)
 
   return (
-    <div className={cx('app', themeName)}>
+    <div className={cx('app', themeName)} id="top">
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,6 +31,7 @@ const Index = () => {
         <Contact />
       </main>
 
+      <ScrollToTop />
       <Footer />
     </div>
   )
