@@ -1,40 +1,38 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { useContext } from 'react'
+import cx from 'classnames'
+import { ThemeContext } from '@client/contexts/theme'
+import Header from '@client/components/Header/Header'
+import About from '@client/components/About/About'
+import Certs from '@client/components/Certs/Certs'
+import Skills from '@client/components/Skills/Skills'
+import Contact from '@client/components/Contact/Contact'
+import Footer from '@client/components/Footer/Footer'
 
-import styles from '@client/styles/Home.module.css'
+const Index = () => {
+  const { themeName } = useContext(ThemeContext)
 
-export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={cx('app', themeName)}>
       <Head>
-        <title>CLSec</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="CLSec.io" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>CLSec</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to CLSec
-        </h1>
+      <Header />
 
-        <p className={styles.description}>
-          Wow, a website.
-        </p>
-
-        <div className={styles.grid}>
-          <a className={styles.card}>
-            <h2>Wow &rarr;</h2>
-            <p>A card.</p>
-          </a>
-        </div>
+      <main>
+        <About />
+        <Certs />
+        <Skills />
+        <Contact />
       </main>
 
-      <footer className={styles.footer}>
-        <a href="#" rel="noopener noreferrer">
-          Powered by{' '}
-          <code className={styles.code}>me</code>
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
+
+export default Index
