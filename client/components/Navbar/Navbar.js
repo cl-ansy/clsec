@@ -1,8 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import cx from 'classnames'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
+import { Menu, X } from 'react-feather'
 import styles from '@client/components/Navbar/Navbar.module.css'
 
 const ThemeToggle = dynamic(
@@ -49,7 +48,7 @@ const Navbar = () => {
         className={cx(styles['nav__hamburger'], 'btn btn--icon')}
         aria-label="toggle navigation"
       >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
+        {showNavList ? <X /> : <Menu />}
       </button>
     </nav>
   )

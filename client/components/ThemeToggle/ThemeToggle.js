@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
+import { Sun, Moon } from 'react-feather'
 
 const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme)
@@ -22,7 +21,7 @@ const ThemeToggle = () => {
       className="center btn btn--icon"
       aria-label="toggle theme"
     >
-      {activeTheme === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
+      {activeTheme === 'dark' ? <Sun /> : <Moon />}
     </button>
   )
 }

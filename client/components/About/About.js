@@ -1,6 +1,5 @@
 import cx from 'classnames'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import { GitHub, Linkedin } from 'react-feather'
 import styles from '@client/components/About/About.module.css'
 
 const About = () =>
@@ -29,7 +28,7 @@ const About = () =>
         aria-label="github"
         className="link link--icon"
       >
-        <GitHubIcon />
+        <GitHub />
       </a>
 
       <a
@@ -39,7 +38,7 @@ const About = () =>
         aria-label="linkedin"
         className="link link--icon"
       >
-        <LinkedInIcon />
+        <Linkedin />
       </a>
     </div>
   </div>

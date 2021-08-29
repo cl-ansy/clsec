@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
+import { ArrowUp } from 'react-feather'
 import styles from '@client/components/ScrollToTop/ScrollToTop.module.css'
 
 const ScrollToTop = () => {
@@ -16,7 +16,7 @@ const ScrollToTop = () => {
   return isVisible ? (
     <div className={styles['scroll-top']}>
       <a href='#top'>
-        <ArrowUpwardIcon fontSize='large' />
+        <ArrowUp />
       </a>
     </div>
   ) : null
