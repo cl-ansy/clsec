@@ -71,7 +71,7 @@ button {
   background-color: var(--clr-bg);
 }
 
-.light {
+body[data-theme="light"] {
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
   --clr-fg: #555;
@@ -80,7 +80,7 @@ button {
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.dark {
+body[data-theme="dark"] {
   --clr-bg: #23283e;
   --clr-bg-alt: #2a2f4c;
   --clr-fg: #bdbddd;

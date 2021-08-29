@@ -1,14 +1,17 @@
-import { useContext, useState } from 'react'
+import dynamic from 'next/dynamic'
+import { useState } from 'react'
 import cx from 'classnames'
-import { ThemeContext } from '@client/contexts/theme'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
 import styles from '@client/components/Navbar/Navbar.module.css'
 
+const ThemeToggle = dynamic(
+  () => import('@client/components/ThemeToggle/ThemeToggle'), {
+    ssr: false,
+  }
+)
+
 const Navbar = () => {
-  const { themeName, toggleTheme } = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = () => setShowNavList(!showNavList)
@@ -38,14 +41,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <button
-        type="button"
-        onClick={toggleTheme}
-        className="center btn btn--icon"
-        aria-label="toggle theme"
-      >
-        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
-      </button>
+      <ThemeToggle />
 
       <button
         type="button"
