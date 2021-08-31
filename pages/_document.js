@@ -7,9 +7,7 @@ class _Document extends Document {
         if(window.localStorage.getItem('theme')) {
           return window.localStorage.getItem('theme')
         }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light'
+        return 'dark'
       }
       document.body.dataset.theme = getUserPreference()
     `

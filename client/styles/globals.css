@@ -9,7 +9,6 @@ body {
   margin: 0;
   border: 0;
   outline: 0;
-  background-color: inherit;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -63,16 +62,9 @@ button {
   cursor: pointer;
 }
 
-.app {
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
-  color: var(--clr-fg);
-  background-color: var(--clr-bg);
-}
-
 body[data-theme="light"] {
   --clr-bg: #fcfcfc;
+  --clr-bg-rgb: 252, 252, 252;
   --clr-bg-alt: #fff;
   --clr-fg: #555;
   --clr-fg-alt: #444;
@@ -82,6 +74,7 @@ body[data-theme="light"] {
 
 body[data-theme="dark"] {
   --clr-bg: #23283e;
+  --clr-bg-rgb: 35, 40, 62;
   --clr-bg-alt: #2a2f4c;
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
@@ -90,8 +83,25 @@ body[data-theme="dark"] {
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
+header,
 .section {
-  margin-top: 5em;
+  background-color: rgba(var(--clr-bg-rgb), 0.6);
+}
+
+.app {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: var(--clr-fg);
+  background-color: transparent;
+}
+
+.section {
+  padding-top: 5em;
+}
+
+.section:last-child {
+  padding-bottom: 5em;
 }
 
 .section__title {
@@ -142,6 +152,7 @@ body[data-theme="dark"] {
 }
 
 .btn {
+  background-color: inherit;
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;

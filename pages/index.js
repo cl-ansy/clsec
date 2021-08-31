@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Nebula from '@client/components/Nebula/Nebula'
 import Header from '@client/components/Header/Header'
 import About from '@client/components/About/About'
 import Certs from '@client/components/Certs/Certs'
@@ -16,15 +17,15 @@ const Index = () =>
       <title>CLSec</title>
     </Head>
 
-    <Header />
+    <Nebula />
 
     <main>
+      <Header />
       <About />
       <Certs />
       <Skills />
       <Contact />
     </main>
-
     <ScrollToTop />
     <Footer />
   </div>

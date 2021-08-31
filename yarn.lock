@@ -2038,6 +2038,10 @@ postcss@8.2.15:
     nanoid "^3.1.23"
     source-map "^0.6.1"
 
+postprocessing@^6.22.5:
+  version "6.22.5"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.22.5.tgz#e1c7fdcf444c2882cb00c371002354db2d8eeb0d"
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -2552,6 +2556,10 @@ table@^6.0.9:
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
+
+three@^0.132.2:
+  version "0.132.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.132.2.tgz#95eb1856147237c03e887cbbe56f964b6fb40b5e"
 
 timers-browserify@2.0.12, timers-browserify@^2.0.4:
   version "2.0.12"

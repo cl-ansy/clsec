@@ -3,7 +3,7 @@ import { GitHub, Linkedin } from 'react-feather'
 import styles from '@client/components/About/About.module.css'
 
 const About = () =>
-  <div className={cx(styles.about, 'center')}>
+  <section className={cx(styles.about, 'section center')} id="about">
     <h1>
       Hi, I&apos;m <span className={styles['about__name']}>Chris.</span>
     </h1>
@@ -41,6 +41,6 @@ const About = () =>
         <Linkedin />
       </a>
     </div>
-  </div>
+  </section>
 
 export default About
